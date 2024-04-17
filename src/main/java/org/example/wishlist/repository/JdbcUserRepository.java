@@ -16,13 +16,12 @@ public class JdbcUserRepository implements UserRepository {
         String sql = "SELECT * FROM users WHERE username = ?";
         return jdbcTemplate.queryForObject(sql, new Object[]{username}, (rs, rowNum) ->
                 new User(
-                        rs.getInt("brugerID"),
-                        rs.getString("fornavn"),
-                        rs.getString("efternavn"),
-                        rs.getDate("fodselsdag"),
+                        rs.getInt("user_id"),
+                        rs.getString("first_name"),
+                        rs.getString("last_name"),
                         rs.getString("email"),
-                        rs.getString("brugernavn"),
-                        rs.getString("password")
+                        rs.getString("username"),
+                        rs.getString("passcode")
                 ));
     }
 }
