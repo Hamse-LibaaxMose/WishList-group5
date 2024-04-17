@@ -6,24 +6,22 @@ public class User {
 
     private int brugerID;
 
-    private String fornavn;
-    private String efternavn;
-    private Date fodselsdag;
+    private String first_name;
+    private String last_name;
     private String email;
-    private String brugernavn;
-    private String password;
+    private String username;
+    private String passcode;
 
     public User() {
     }
 
-    public User(int brugerID, String fornavn, String efternavn, Date fodselsdag, String email, String brugernavn, String password) {
+    public User(int brugerID, String first_name, String last_name, String email, String username, String password) {
         this.brugerID = brugerID;
-        this.fornavn = fornavn;
-        this.efternavn = efternavn;
-        this.fodselsdag = fodselsdag;
+        this.first_name = first_name;
+        this.last_name = last_name;
         this.email = email;
-        this.brugernavn = brugernavn;
-        this.password = password;
+        this.username = username;
+        this.passcode = passcode;
     }
 
     public int getBrugerID() {
@@ -35,27 +33,19 @@ public class User {
     }
 
     public String getFornavn() {
-        return fornavn;
+        return first_name;
     }
 
     public void setFornavn(String fornavn) {
-        this.fornavn = fornavn;
+        this.first_name = fornavn;
     }
 
     public String getEfternavn() {
-        return efternavn;
+        return last_name;
     }
 
     public void setEfternavn(String efternavn) {
-        this.efternavn = efternavn;
-    }
-
-    public Date getFodselsdag() {
-        return fodselsdag;
-    }
-
-    public void setFodselsdag(Date fodselsdag) {
-        this.fodselsdag = fodselsdag;
+        this.last_name = efternavn;
     }
 
     public String getEmail() {
@@ -67,18 +57,18 @@ public class User {
     }
 
     public String getBrugernavn() {
-        return brugernavn;
+        return username;
     }
 
     public void setBrugernavn(String brugernavn) {
-        this.brugernavn = brugernavn;
+        this.username = brugernavn;
     }
 
     public String getPassword() {
-        return password;
+        return passcode;
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.passcode = password;
     }
 }
