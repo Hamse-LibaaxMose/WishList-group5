@@ -1,19 +1,76 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-<head th:fragment="Header">
+<head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/ftr&hdr.css">
 
 </head>
 <body>
-<header th:replace="fragments/header :: Header"></header>
-<div class="content">
-    <h2>Velkommen..</h2>
+<header class="heater">
+
+    <img class="header_img" src="/billeder/wishlist_icon.png" alt="Wish_List Icon"/>
+    <div class="container"></div>
+    <nav>
+        <ul class="nav_links">
+            <li class="nav_li"><a href="#">Forside</a></li>
+            <li class="nav_li"><a href="#">Ønskeliste</a></li>
+            <li class="nav_li"><a href="#">Om Os</a></li>
+        </ul>
+    </nav>
+    <nav class="nav_button">
+        <a href="" class="signup_login"><button>Log In</button></a>
+        <a href="" class="signup_login"><button>Sign Up</button></a>
+    </nav>
+</header>
+<div class="introContainer">
+<h1>Velkommen til WishList</h1><br><h2>
+Få nemmere mulighed for at dele dine drømme ønsker,
+som du kan dele med dine bekendte & venner.</h2><br>
+<p>
+Når du ønsker at lave enlist,
+som alle kan se er wishlist den bedst liste at se.
+
+Du kan invitere dine venner til at se din ønskeliste,
+som de kan bruge til at købe de ønsker du har.
+</p><br>
+
+    <img src="/billeder/wishlist.jpg"/>
 </div>
-<div>
-<footer th:replace="fragments/footer :: Footer"></footer>
-</div>
+
+    <footer>
+        <div class="info">
+            <pre>
+                <h5>Kontakt Informationer</h5>
+
+
+                <p>tlf: 85 - 85 - 95 - 73</p>
+
+                <p>Email: wishlist@wishy.com</p>
+
+                <p>Adresse: Tuborg Havnepark 15, 2900 Hellerup</p>
+            </pre>
+        </div>
+    <div class="Sociale_Medier">
+            <nav class="logo">
+                <a href="x.com">
+                    <img src="../static/billeder/x_icon.webp"/>
+                    <p>x: Wishlist</p>
+                </a>
+                <a href="facebook.com">
+                    <img src="../static/billeder/facebook_icon.png"/>
+                    <p>FaceBook: Wishlist</p>
+                </a>
+                <a href="instragram.com">
+                    <img src="../static/billeder/Instagram_icon.png.webp"/>
+                    <p>Instagram: Wishlist</p>
+                </a>
+            </nav>
+
+    </div>
+
+    </footer>
 </body>
 </html>

@@ -1,0 +1,45 @@
+:root{
+    --lineargradientNavbar: linear-gradient(45deg,
+    #0effdf,
+    #00b4ff,
+    #06ff93
+    );
+    --backgroundColor: linear-gradient(180deg, rgba(0, 255, 247, 0.33), white);
+    --hover-color-navbar: blue;
+}
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    background-color:var(--backgroundColor);
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: var(--backgroundColor);
+    position: relative;
+    min-height: 100vh;
+    color: rgba(0, 255, 247, 0.33)
+}
+.introContainer{
+    color: black;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1rem;
+    font-weight: normal;
+    font-family: Algerian, sans-serif;
+    margin-top: 2%;
+}
+.introContainer h1, h2,p{
+    display: flex;
+    background-color: transparent;
+   flex-direction: column;
+    align-content: center;
+
+}
+.introContainer img{
+    display: inline-block;
+    width: 30vw;
+    height: 60vh;
+}
