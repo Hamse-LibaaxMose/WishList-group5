@@ -13,10 +13,10 @@
 <body>
 <header>
     <div class="box_menuBar">
-        <a th:href="@{'/userpage'}"><img src="/styles/images/WishWorld_Icon.png" alt="E" class="icon_menuBar"></a>
+        <a th:href="@{userpage}"><img src="/images/img.png" alt="E" class="icon_menuBar"></a>
         <div class="profile">
             <div class="dropdown">
-                <img src="/styles/images/Profile.jpg" alt="Profile" class="dropdown_icon">
+                <img src="/images/Profile.png" alt="Profile" class="dropdown_icon">
                 <div class="dropdown-content">
                     <a th:href="@{'/myprofile'}">Min Profil</a>
                     <a th:href="@{'/logout'}">Log ud</a>
@@ -30,6 +30,7 @@
     <tr>
         <th>Navn</th>
         <th>Pris</th>
+        <th>Link</th>
         <a class="back_button" th:href="@{'/userpage'}">Tilbage</a>
         <a class="wish_Button" href="#popup2">Tilføj ønske</a>
         <a class="wish_Button" href="#popup3">Del ønskeliste</a>
@@ -51,7 +52,7 @@
                 <h2>Del din Ønskeliste</h2>
                 <a class="close" href="#">&times;</a>
                 <div class="input_box">
-                    <input type="text" class="newList_label" th:value="'http://localhost:5555/shareWishList/' + ${wishlist}" readonly>
+                    <input type="text" class="newList_label" th:value="'http://localhost:8080/shareWishList/' + ${wishlist}" readonly>
                 </div>
             </div>
         </div>
@@ -61,6 +62,9 @@
     <tr th:each="wish: ${wishes}">
         <td th:text="${wish.wish_name}"/>
         <td th:text="${wish.wish_price}"/>
+        <td>     <a th:href="${wish.wish_link}" target="_blank">Køb her</a>
+
+
         <td>
             <a th:href="@{'/deleteWish/'+ ${wishlist} + '/'+${wish.wish_id}}">
                 <button class="delete_wish_button">Slet</button>

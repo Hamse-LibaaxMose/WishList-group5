@@ -24,29 +24,6 @@ public class User {
         this.passcode = password;
     }
 
-    public int getBrugerID() {
-        return brugerID;
-    }
-
-    public void setBrugerID(int brugerID) {
-        this.brugerID = brugerID;
-    }
-
-    public String getFornavn() {
-        return first_name;
-    }
-
-    public void setFornavn(String fornavn) {
-        this.first_name = fornavn;
-    }
-
-    public String getEfternavn() {
-        return last_name;
-    }
-
-    public void setEfternavn(String efternavn) {
-        this.last_name = efternavn;
-    }
 
     public String getEmail() {
         return email;
@@ -69,11 +46,31 @@ public class User {
     }
 
 
+    public void setPasscode(String passcode) {
+        this.passcode = passcode;
+    }
+    public void setUsername(String username) {
+        this.username = username;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-
-
-
-
-
+    public void setLast_name(String last_name) {
+        this.last_name = last_name;
+    }
+    public void setFirst_name(String first_name) {
+        this.first_name = first_name;
+    }
+    public void setUser_id(int user_id) {
+        this.brugerID = user_id;
+    }
 
 }
+
+
+
+
+
+
+
