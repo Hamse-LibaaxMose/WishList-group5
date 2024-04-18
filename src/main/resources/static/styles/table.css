@@ -1,0 +1,41 @@
+table {
+    border-collapse: collapse;
+    width: 60%;
+    position: absolute;
+    top: calc(100px + 45%);
+    left: 4%;
+    background-color: lightgrey;
+    border-bottom: 1px solid #81914a;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    z-index: -1;
+}
+
+th, td {
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 48px;
+    font-family: Arial, serif;
+    padding: 10px;
+    padding-right: 40px;
+}
+
+tr{
+    color: dodgerblue;
+}
+
+th {
+    background-color: lightgrey;
+}
+th:first-of-type {
+    border-top-left-radius: 10px;
+}
+th:last-of-type {
+    border-top-right-radius: 10px;
+}
+tr:last-of-type td:first-of-type {
+    border-bottom-left-radius: 10px;
+}
+tr:last-of-type td:last-of-type {
+    border-bottom-right-radius: 10px;
+}

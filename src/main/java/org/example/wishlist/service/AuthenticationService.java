@@ -57,4 +57,5 @@ public class AuthenticationService {
     public boolean userAlreadyExist(String username){
         return wishRepo.userAlreadyExist(username);
     }
+
 }

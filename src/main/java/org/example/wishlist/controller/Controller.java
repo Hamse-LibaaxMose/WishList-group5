@@ -18,10 +18,6 @@ public class Controller {
     @Autowired
     AuthenticationService wishService;
 
-    //@GetMapping("/")
-    //public String showIndex(){
-    //return "index";}
-
     @GetMapping("/index")
     public String index(HttpServletRequest request, Model model){
         HttpSession session = request.getSession();
@@ -128,7 +124,8 @@ public class Controller {
         }
     }
     @PostMapping("updateWish/{wishlist_id}/{wish_id}")
-    public String updateWish(@PathVariable("wishlist_id") int wishlist_id,@PathVariable("wish_id") int wish_id, @ModelAttribute Wish wish){
+    public String updateWish(@PathVariable("wishlist_id") int wishlist_id,@PathVariable("wish_id") int wish_id, @ModelAttribute Wish wish, @RequestParam("wish_link") String wish_link){
+        wish.setWish_link("http://"+wish_link);
         wishService.updateWish(wish_id, wish);
         return "redirect:/viewWishList/" + wishlist_id;
     }
@@ -149,4 +146,5 @@ public class Controller {
         model.addAttribute("wishlist", wishlist_id);
         return "shareWishList";
     }
+
 }

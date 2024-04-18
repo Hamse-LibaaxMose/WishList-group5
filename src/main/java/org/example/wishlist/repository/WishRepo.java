@@ -66,7 +66,7 @@ public class WishRepo {
         String sql = "INSERT INTO wishlist (wishlist_name, user_id) VALUES (?, (SELECT user_id FROM users WHERE username = ?))";
         template.update(sql, wishlist.getWishlist_name(), username);
     }
-    //todo missing boolean reserved code
+
     public Boolean deleteWish(int wish_id){
         String sql = "DELETE FROM wish where wish_id = ?";
         return template.update(sql, wish_id) > 0;

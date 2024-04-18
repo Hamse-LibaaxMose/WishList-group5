@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Min Profil</title>
+    <link rel="stylesheet" type="text/css" href="/styles/myprofile.css">
+    <link rel="stylesheet" type="text/css" href="/styles/menuHead.css">
+    <link rel="stylesheet" type="text/css" href="/styles/dropdown.css">
+    <link rel="stylesheet" type="text/css" href="/styles/wishList.css">
+    <link rel="icon" type="image/png" href="/styles/images/W_Emblem.png">
+</head>
+<header>
+    <div class="box_menuBar">
+        <a th:href="@{userpage}"><img src="/images/img.png" alt="E" class="icon_menuBar"></a>
+        <div class="profile">
+            <div class="dropdown">
+                <img src="/images/Profile.png" alt="Profile" class="dropdown_icon">
+                <div class="dropdown-content">
+                    <a th:href="@{logout}">Log ud</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<body>
+<div class="container">
+    <h1>Min profil</h1>
+
+    <p>Fornavn: <span th:text="${user.first_name}"></span></p>
+    <p>Efternavn: <span th:text="${user.last_name}"></span></p>
+    <p>E-mail: <span th:text="${user.email}"></span></p>
+    <hr>
+    <p>Brugernavn: <span th:text="${user.username}"></span></p>
+    <p>Adgangskode: <span th:text="${user.passcode}" style="-webkit-text-security: disc"></span></p>
+</div>
+</body>
+</html>
