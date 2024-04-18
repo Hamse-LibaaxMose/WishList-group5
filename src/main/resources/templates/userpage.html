@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Page</title>
+    <link rel="icon" type="image/png" href="/styles/images/W_Emblem.png">
+    <link rel="stylesheet" type="text/css" href="/styles/userpage.css">
+    <link rel="stylesheet" type="text/css" href="/styles/menuHead.css">
+    <link rel="stylesheet" type="text/css" href="/styles/popupBox.css">
+    <link rel="stylesheet" type="text/css" href="/styles/dropdown.css">
+</head>
+<body>
+<header>
+    <div class="box_menuBar">
+        <a th:href="@{userpage}"><img src="/styles/images/WishWorld_Icon.png" alt="E" class="icon_menuBar"></a>
+        <div class="profile">
+            <div class="dropdown">
+                <img src="styles/images/Profile.jpg" alt="Profile" class="dropdown_icon">
+                <div class="dropdown-content">
+                    <a th:href="@{myprofile}">Min Profil</a>
+                    <a th:href="@{logout}">Log ud</a>
+                </div>
+            </div>
+            <p class="welcome_text">Velkommen <span th:text="${user.first_name}"></span>!</p>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="wish_lists">
+        <div th:each="list: ${wishlist}">
+            <a th:href="@{'/viewWishList/' + ${list.wishlist_id}}">
+                <div class="card">
+                    <img src="styles/images/W_Emblem.png" alt="Card Picture" style="width: 100%">
+                    <a th:href="@{'/deleteWishList/' + ${list.wishlist_id}}" class="delete_button">X</a>
+                    <div class="card_container">
+                        <span th:text="${list.wishlist_name}"></span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <a href="#new_wish_popup">
+            <div class="new_card">
+                <img src="styles/images/plus_icon.jpg" alt="New Wishlist" style="width: 100%">
+                <div class="card_container">
+                    <span>Ny ønskeliste</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div id="new_wish_popup" class="overlay">
+        <div class="popup">
+            <h2>Ny Ønskeliste</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="input_box">
+                <form action="/createWishlist" method="post">
+                    <input type="text" name="wishlist_name" placeholder="Navngiv Ønskeliste" class="newList_label">
+                    <input type="submit" value="Opret" class="newList_button">
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+<footer></footer>
+</body>
+</html>
