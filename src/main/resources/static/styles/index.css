@@ -6,6 +6,8 @@
     );
     --backgroundColor: linear-gradient(180deg, rgba(0, 255, 247, 0.33), white);
     --hover-color-navbar: blue;
+    --border-color1: 5px inset #00acf8;
+    --textcolor-white: white;
 }
 *{
     box-sizing: border-box;
@@ -48,4 +50,41 @@ h1, h2,p{
     display: inline-block;
     width: 30vw;
     height: 60vh;
+}
+footer{
+    display: flex;
+    border-top: var(--border-color1);
+    background: var(--lineargradientNavbar);
+    margin: 0;
+    padding: 0;
+    height: 20vh;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-between;
+}
+.kontakt_info{
+    align-content: space-evenly;
+    color: var(--textcolor-white);
+    margin: 0 auto 0 5%
+}
+.socialemedier{
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--textcolor-white);
+    flex-direction: row;
+    margin: 0 5% 0 auto;
+    align-content: space-evenly;
+}
+.socialemedier img{
+    height: 4vh;
+    width: 2vw;
+}
+.socialemedier ul{
+    display: flex;
+    flex-direction: column;
+}
+.socialemedier li{
+    list-style-type: none;
+    text-align: center;
 }
