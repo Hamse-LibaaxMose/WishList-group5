@@ -21,7 +21,7 @@ public class User {
         this.last_name = last_name;
         this.email = email;
         this.username = username;
-        this.passcode = passcode;
+        this.passcode = password;
     }
 
     public int getBrugerID() {
@@ -52,23 +52,28 @@ public class User {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getBrugernavn() {
+    public String getUsername() {
         return username;
     }
-
-    public void setBrugernavn(String brugernavn) {
-        this.username = brugernavn;
+    public String getLast_name() {
+        return last_name;
     }
-
-    public String getPassword() {
+    public String getFirst_name() {
+        return first_name;
+    }
+    public int getUser_id() {
+        return brugerID;
+    }
+    public String getPasscode() {
         return passcode;
     }
 
-    public void setPassword(String password) {
-        this.passcode = password;
-    }
+
+
+
+
+
+
+
+
 }

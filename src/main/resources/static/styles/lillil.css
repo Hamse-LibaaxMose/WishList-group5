@@ -1,0 +1,81 @@
+:root{
+    --lineargradientNavbar: linear-gradient(45deg,
+    #0effdf,
+    #00b4ff,
+    #06ff93
+    );
+    --backgroundColor: linear-gradient(180deg, rgba(0, 255, 247, 0.33), white);
+    --hover-color-navbar: blue;
+}
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    background-color:var(--backgroundColor);
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: var(--backgroundColor);
+    position: relative;
+    min-height: 100vh;
+    color: rgba(0, 255, 247, 0.33)
+}
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+    background: var(--lineargradientNavbar);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1;
+    border-bottom: 2px inset #00acf8;
+}
+li, a, button{
+    font-family: Arial, sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+}
+.logo{
+    color: black;
+    margin: 0 auto 0 5%;
+}
+.logo, button, a {
+    cursor: pointer;
+}
+.nav_links{
+    list-style-type: none;
+    margin: 0 auto 0 auto;
+    background-color: transparent;
+}
+.nav_li{
+    padding: 0;
+    display: inline-block;
+    background-color: transparent;
+}
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+}
+.nav_links li a:hover{
+    color: var(--hover-color-navbar);
+}
+.nav_button{
+    margin: 0 5% 0 auto;
+}
+button{
+    padding: 0.1rem 0.5rem;
+    background-color: rgb(41, 136, 255, 1);
+    border:none;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover{
+    background-color: rgba(41, 136, 255, 0.5);
+}
